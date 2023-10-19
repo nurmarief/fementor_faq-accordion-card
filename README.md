@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github repo](https://github.com/nurmarief/fementor_faq-accordion-card/)
+- [Live site](https://nurmarief.github.io/fementor_faq-accordion-card/)
 
 ## My process
 
