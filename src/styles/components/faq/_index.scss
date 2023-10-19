@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use '../../variables/breakpoints';
+
+.faq {
+  display: block;
+  margin: 10rem auto;
+  border-radius: 1rem;
+  width: 90vw;
+  background-color: var(--white);
+  box-shadow: 0 0.5rem 1rem var(--very-dark-grayish-blue);
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop-lg')) {
+    & {
+      width: 75vw;
+    }
+  }
+}
+
+.faq__section {
+  display: block;
+}
+
+.faq__section_hero-img {
+  background: url('../images/bg-pattern-mobile.svg') no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      background: url('../images/bg-pattern-desktop.svg') no-repeat -30rem -15rem;
+    }
+  }
+}
+
+.faq__section_faq {
+  padding: 2rem;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'desktop-lg')) {
+    & {
+      padding-right: 5rem;
+    }
+  }
+}
+
+.faq__hero-img {
+  position: relative;
+  bottom: 7.5rem;
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  z-index: 2;
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'mobile')) {
+    & {
+      bottom: 10rem;
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'mobile-lg')) {
+    & {
+      bottom: 15rem;
+    }
+  }
+
+  @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+    & {
+      bottom: 0;
+      top: 6rem;
+      left: -4rem;
+      width: 100%;
+    }
+  }
+
+  &::before {
+    @media screen and (min-width: map.get(breakpoints.$breakpoints, 'tablet')) {
+      & {
+        content: url('../images/illustration-box-desktop.svg');
+        position: absolute;
+        bottom: 2rem;
+        left: -2rem;
+      }
+    }
+  }
+}
+
+.faq__title {
+  font-size: clamp(2rem, calc(2.3vw + 1rem), 2.6rem);
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  margin: 1rem 0;
+}
